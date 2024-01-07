@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Price prediction</title>
+</head>
+<body>
+    <div>
+        <form action="{{url_for('predict')}}" method="post">
+            <label for="age_of_car">Year</label>
+            <input type="number" name="age_of_car" id="age_of_car">
+            <label for="present_price">Present Price(in lakhs)</label>
+            <input type="number" name="present_price" id="present_price">
+            <label for="Kms_Driven">Number of km driven</label>
+            <input type="number" name="Kms_Driven" id="Kms_Driven">
+            <label for="Owner">Owner( choose 0,1,3)</label>
+            <input type="number" name="Owner" id="Owner">
+            <label for="Fuel_Type_Petrol">Select the fuel type</label>
+            <select name="Fuel_Type_Petrol" id="Fuel_Type_Petrol">
+                <option value="Petrol">Petrol</option>
+                <option value="Diesel">Diesel</option>
+                <option value="CNG">CNG</option>
+            </select>
+            <select name="Seller_Type_Individual" id="Seller_Type_Individual">
+                <option value="Dealer">Dealer</option>
+                <option value="Individual">Individual</option>
+            </select>
+            <select name="Transmission_Manual" id="Transmission_Manual">
+                <option value="Manual">Manual</option>
+                <option value="Automatic">Automatic</option>
+            </select>
+            <br>
+            <input type="submit" value="Calculate the Selling price">
+
+        </form>
+    </div>
+</body>
+</html>
